@@ -39,11 +39,38 @@
             background-color: @content-bg-color;
             border-radius: 100px;
             padding: 12px 40px;
-            font-size: 5rem;
+            a{
+               font-size: 5rem; 
+               text-decoration: none;
+               color: @text-color-1;
+            }
+            
         }
     }
 }
 
+
+
 .landing-nav{
     background: @content-bg-color;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    .title{
+        color: @text-color-1;
+        font-size: 3.2rem;
+        padding-left: 10px;
+    }
+    .links{
+        padding-right: 100px;
+        display: flex;
+        justify-content: space-evenly;
+     a{
+        text-decoration: none;
+        color: @text-color-1;
+        font-size: 3rem;
+        padding: 0 30px;
+    }
+    }
+   
 }

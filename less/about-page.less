@@ -1,12 +1,36 @@
 .about-container{
     width: 75%;
     margin: 0 auto;
-    color: white;
+    color: @text-color-2;
     .container-about{
         margin: 60px 0 30px 0;
     }
 }
 
+
+.about-nav{ 
+    background: @about-content-bg-color;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    .title{
+        color: @text-color-2;
+        font-size: 3.2rem;
+        padding-left: 10px;
+    }
+    .links{
+        padding-right: 100px;
+        display: flex;
+        justify-content: space-evenly;
+     a{
+        text-decoration: none;
+        color: @text-color-2;
+        font-size: 3rem;
+        padding: 0 30px;
+    }
+    }
+   
+}
 
 
 .person{
@@ -56,12 +80,7 @@ hr{
     margin: 30px 0;
 }
 
-.about-nav{
-    background: @about-content-bg-color;
-    a{
-        color:white;
-    }
-}
+
 
 #end-page-nav{
     margin-top: 60px;

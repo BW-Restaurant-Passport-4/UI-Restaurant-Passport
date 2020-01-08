@@ -138,14 +138,24 @@ body {
 h1 {
   font-size: 8rem;
 }
-nav {
+.about-nav {
   padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.about-nav .title {
+  color: white;
+  font-size: 3.2rem;
+  padding-left: 10px;
+}
+.about-nav .links {
+  padding-right: 10px;
   display: flex;
   justify-content: space-evenly;
 }
-nav a {
+.about-nav .links a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 3rem;
 }
 button {
@@ -219,10 +229,33 @@ button {
   background-color: rgba(220, 220, 220, 0.6);
   border-radius: 100px;
   padding: 12px 40px;
+}
+.buttons-container .button-holder button a {
   font-size: 5rem;
+  text-decoration: none;
+  color: black;
 }
 .landing-nav {
   background: rgba(220, 220, 220, 0.6);
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.landing-nav .title {
+  color: black;
+  font-size: 3.2rem;
+  padding-left: 10px;
+}
+.landing-nav .links {
+  padding-right: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.landing-nav .links a {
+  text-decoration: none;
+  color: black;
+  font-size: 3rem;
+  padding: 0 30px;
 }
 .about-container {
   width: 75%;
@@ -231,6 +264,28 @@ button {
 }
 .about-container .container-about {
   margin: 60px 0 30px 0;
+}
+.about-nav {
+  background: #88304E;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.about-nav .title {
+  color: white;
+  font-size: 3.2rem;
+  padding-left: 10px;
+}
+.about-nav .links {
+  padding-right: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.about-nav .links a {
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+  padding: 0 30px;
 }
 .person {
   background: #88304E;
@@ -275,12 +330,16 @@ hr {
   border-radius: 100px;
   margin: 30px 0;
 }
-.about-nav {
-  background: #88304E;
-}
-.about-nav a {
-  color: white;
-}
 #end-page-nav {
   margin-top: 60px;
+}
+.pitch {
+  background: #88304E;
+  padding: 25px;
+  border-radius: 20px;
+}
+.pitch p {
+  font-size: 2.2rem;
+  color: white;
+  text-align: justify;
 }
