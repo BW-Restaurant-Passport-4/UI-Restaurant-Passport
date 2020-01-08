@@ -133,18 +133,12 @@ body {
   font-family: 'passportregular';
 }
 .bg {
-  background-color: grey;
-  height: 100%;
-  width: auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-color: #311D3F;
 }
 h1 {
   font-size: 8rem;
 }
 nav {
-  background-color: rgba(220, 220, 220, 0.3);
   padding: 10px 0;
   display: flex;
   justify-content: space-evenly;
@@ -160,19 +154,52 @@ button {
 .bg {
   text-align: center;
 }
-.bg .container {
-  border: 5px solid rgba(220, 220, 220, 0.3);
+.bg .container-landing {
+  border: 5px solid rgba(220, 220, 220, 0.6);
   border-radius: 100px;
-  margin: 135px 0 0 0;
   display: inline-block;
   text-align: center;
 }
-.bg .container header {
+.bg .container-landing header {
   margin: 10px;
-  background-color: rgba(220, 220, 220, 0.3);
+  background-color: rgba(220, 220, 220, 0.6);
   text-align: center;
   border-radius: 100px;
   padding: 22px 60px;
+}
+.bg .container-about {
+  border: 5px solid #88304E;
+  border-radius: 100px;
+  display: inline-block;
+  text-align: center;
+}
+.bg .container-about header {
+  margin: 10px;
+  background-color: #88304E;
+  text-align: center;
+  border-radius: 100px;
+  padding: 22px 60px;
+}
+.landing-page-body {
+  background-image: url(../images/restaurant-2.jpeg);
+  width: auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.landing-page-body .flex-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75%;
+}
+.landing-page-body .flex-container .container {
+  margin: 0;
 }
 .buttons-container {
   width: 80%;
@@ -180,34 +207,39 @@ button {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  margin-top: 200px;
-  margin-bottom: 290px;
 }
 .buttons-container .button-holder {
-  border: 4px solid rgba(220, 220, 220, 0.3);
+  border: 4px solid rgba(220, 220, 220, 0.6);
   border-radius: 100px;
 }
 .buttons-container .button-holder button {
   border: none;
   width: 300px;
   margin: 6px;
-  background-color: rgba(220, 220, 220, 0.3);
+  background-color: rgba(220, 220, 220, 0.6);
   border-radius: 100px;
   padding: 12px 40px;
   font-size: 5rem;
 }
+.landing-nav {
+  background: rgba(220, 220, 220, 0.6);
+}
 .about-container {
   width: 75%;
   margin: 0 auto;
+  color: white;
 }
-.about-container .container {
+.about-container .container-about {
   margin: 60px 0 30px 0;
 }
 .person {
+  background: #88304E;
+  padding: 25px 0;
+  border-radius: 20px;
   height: 250px;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .person .about-text {
   width: 45%;
@@ -222,19 +254,33 @@ button {
   font-size: 2rem;
   text-align: justify;
 }
-.person .img-container {
+.person .img-container-a {
   width: 45%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
-.person .img-container img {
+.person .img-container-a img {
+  height: 100%;
+}
+.person .img-container-b {
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+}
+.person .img-container-b img {
   height: 100%;
 }
 hr {
-  border: 3px solid rgba(220, 220, 220, 0.3);
+  border: 3px solid #88304E;
   border-radius: 100px;
   margin: 30px 0;
 }
+.about-nav {
+  background: #88304E;
+}
+.about-nav a {
+  color: white;
+}
 #end-page-nav {
-  margin-top: 30px;
+  margin-top: 60px;
 }
