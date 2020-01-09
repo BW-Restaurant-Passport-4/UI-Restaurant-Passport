@@ -131,32 +131,18 @@ body {
   height: 100%;
   font-size: 62.5%;
   font-family: 'passportregular';
+  box-sizing: border-box;
 }
 .bg {
   background-color: #311D3F;
 }
 h1 {
-  font-size: 8rem;
+  font-size: 5rem;
 }
-.about-nav {
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-}
-.about-nav .title {
-  color: white;
-  font-size: 3.2rem;
-  padding-left: 10px;
-}
-.about-nav .links {
-  padding-right: 10px;
-  display: flex;
-  justify-content: space-evenly;
-}
-.about-nav .links a {
-  text-decoration: none;
-  color: white;
-  font-size: 3rem;
+@media (max-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 button {
   font-family: 'passportregular';
@@ -164,31 +150,27 @@ button {
 .bg {
   text-align: center;
 }
-.bg .container-landing {
-  border: 5px solid rgba(220, 220, 220, 0.6);
-  border-radius: 100px;
-  display: inline-block;
-  text-align: center;
-}
-.bg .container-landing header {
-  margin: 10px;
+.bg .container-landing h1 {
   background-color: rgba(220, 220, 220, 0.6);
-  text-align: center;
+  clear: both;
   border-radius: 100px;
-  padding: 22px 60px;
+  text-align: center;
+  padding: 20px 60px;
+  margin: 50px;
 }
-.bg .container-about {
-  border: 5px solid #88304E;
+@media (max-width: 800px) {
+  .bg .container-landing h1 {
+    padding: 20px 40px;
+  }
+}
+.bg .container-about h1 {
+  background-color: #88304E;
+  clear: both;
   border-radius: 100px;
   display: inline-block;
   text-align: center;
-}
-.bg .container-about header {
-  margin: 10px;
-  background-color: #88304E;
-  text-align: center;
-  border-radius: 100px;
-  padding: 22px 60px;
+  padding: 20px 60px;
+  margin-bottom: 30px;
 }
 .landing-page-body {
   background-image: url(../images/restaurant-2.jpeg);
@@ -218,20 +200,25 @@ button {
   flex-wrap: nowrap;
   justify-content: space-evenly;
 }
-.buttons-container .button-holder {
-  border: 4px solid rgba(220, 220, 220, 0.6);
-  border-radius: 100px;
+@media (max-width: 800px) {
+  .buttons-container {
+    width: 90%;
+  }
 }
-.buttons-container .button-holder button {
+@media (max-width:500px) {
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.buttons-container a {
   border: none;
-  width: 300px;
+  width: 130px;
   margin: 6px;
   background-color: rgba(220, 220, 220, 0.6);
   border-radius: 100px;
   padding: 12px 40px;
-}
-.buttons-container .button-holder button a {
-  font-size: 5rem;
+  font-size: 3rem;
   text-decoration: none;
   color: black;
 }
@@ -241,26 +228,51 @@ button {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width:500px) {
+  .landing-nav {
+    justify-content: center;
+  }
+}
 .landing-nav .title {
   color: black;
-  font-size: 3.2rem;
+  font-size: 2rem;
   padding-left: 10px;
 }
+@media (max-width: 800px) {
+  .landing-nav .title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width:500px) {
+  .landing-nav .title {
+    display: none;
+  }
+}
 .landing-nav .links {
-  padding-right: 100px;
   display: flex;
   justify-content: space-evenly;
 }
 .landing-nav .links a {
   text-decoration: none;
   color: black;
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 0 30px;
+}
+@media (max-width: 800px) {
+  .landing-nav .links a {
+    font-size: 1.5rem;
+    padding: 0 15px;
+  }
 }
 .about-container {
   width: 75%;
   margin: 0 auto;
   color: white;
+}
+@media (max-width: 800px) {
+  .about-container {
+    width: 90%;
+  }
 }
 .about-container .container-about {
   margin: 60px 0 30px 0;
@@ -271,59 +283,128 @@ button {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 800px) {
+  .about-nav {
+    flex-direction: column;
+  }
+}
 .about-nav .title {
   color: white;
-  font-size: 3.2rem;
+  font-size: 2rem;
   padding-left: 10px;
 }
+@media (max-width: 800px) {
+  .about-nav .title {
+    padding-bottom: 20px;
+  }
+}
 .about-nav .links {
-  padding-right: 100px;
   display: flex;
   justify-content: space-evenly;
 }
 .about-nav .links a {
   text-decoration: none;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 0 30px;
+}
+@media (max-width: 800px) {
+  .about-nav .links a {
+    font-size: 1.5rem;
+    padding: 0 15px;
+  }
 }
 .person {
   background: #88304E;
   padding: 25px 0;
   border-radius: 20px;
-  height: 250px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
 }
+@media (max-width:500px) {
+  .person {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .person .about-text {
   width: 45%;
 }
+@media (max-width:500px) {
+  .person .about-text {
+    width: 95%;
+    padding: 10px;
+  }
+}
 .person .about-text h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-align: center;
   padding-bottom: 20px;
   font-weight: 600;
 }
+@media (max-width: 800px) {
+  .person .about-text h2 {
+    font-size: 1.8rem;
+  }
+}
 .person .about-text p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: justify;
+}
+@media (max-width: 800px) {
+  .person .about-text p {
+    font-size: 1.5rem;
+  }
 }
 .person .img-container-a {
   width: 45%;
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width:500px) {
+  .person .img-container-a {
+    justify-content: center;
+  }
+}
 .person .img-container-a img {
-  height: 100%;
+  height: 250px;
+}
+@media (max-width: 800px) {
+  .person .img-container-a img {
+    height: 200px;
+  }
+}
+@media (max-width:500px) {
+  .person .img-container-a img {
+    height: 80vw;
+  }
 }
 .person .img-container-b {
   width: 45%;
   display: flex;
   justify-content: flex-start;
 }
+@media (max-width:500px) {
+  .person .img-container-b {
+    justify-content: center;
+  }
+}
 .person .img-container-b img {
-  height: 100%;
+  height: 250px;
+}
+@media (max-width: 800px) {
+  .person .img-container-b img {
+    height: 200px;
+  }
+}
+@media (max-width:500px) {
+  .person .img-container-b img {
+    height: 80vw;
+  }
+}
+.odd {
+  flex-direction: column-reverse;
 }
 hr {
   border: 3px solid #88304E;
@@ -332,6 +413,10 @@ hr {
 }
 #end-page-nav {
   margin-top: 60px;
+  justify-content: center;
+}
+#end-page-nav .title {
+  display: none;
 }
 .pitch {
   background: #88304E;
@@ -342,4 +427,14 @@ hr {
   font-size: 2.2rem;
   color: white;
   text-align: justify;
+}
+@media (max-width: 800px) {
+  .pitch p {
+    font-size: 2rem;
+  }
+}
+@media (max-width:500px) {
+  .pitch p {
+    font-size: 1.8rem;
+  }
 }

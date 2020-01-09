@@ -1,29 +1,28 @@
 .bg{
 text-align: center;
-.container-landing {
-    border: 5px solid @content-bg-color;
-    border-radius: 100px;
-    display: inline-block;
-    text-align: center;
-    header{
-        margin: 10px;
+.container-landing{
+    h1{
         background-color: @content-bg-color;
-        text-align:center;
+        clear: both;
         border-radius: 100px;
-        padding: 22px 60px;
+        text-align: center;
+        padding: 20px 60px;
+        margin: 50px;
+        @media @tablet{
+            padding: 20px 40px;
+        }
     }
 }
+
 .container-about {
-    border: 5px solid @about-content-bg-color;
-    border-radius: 100px;
-    display: inline-block;
-    text-align: center;
-    header{
-        margin: 10px;
+    h1{
         background-color: @about-content-bg-color;
-        text-align:center;
+        clear: both;
         border-radius: 100px;
-        padding: 22px 60px;
+        display:inline-block;
+        text-align: center;
+        padding: 20px 60px;
+        margin-bottom: 30px;
     }
 }
 }
