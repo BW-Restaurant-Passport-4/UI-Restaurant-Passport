@@ -172,28 +172,74 @@ button {
   padding: 20px 60px;
   margin-bottom: 30px;
 }
-.landing-page-body {
+.landing-page-body .cb-slideshow,
+.landing-page-body .cb-slideshow:after {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.landing-page-body .cb-slideshow:after {
+  content: '';
+  background: transparent;
+}
+.landing-page-body .cb-slideshow li span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  animation: image-animation 36s linear infinite 0s;
+}
+.landing-page-body .cb-slideshow li:nth-child(1) span {
+  background-image: url(../images/restaurant-1.jpeg);
+}
+.landing-page-body .cb-slideshow li:nth-child(2) span {
   background-image: url(../images/restaurant-2.jpeg);
-  width: auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  animation-delay: 6s;
+}
+.landing-page-body .cb-slideshow li:nth-child(3) span {
+  background-image: url(../images/3.jpg);
+  animation-delay: 12s;
+}
+.landing-page-body .cb-slideshow li:nth-child(4) span {
+  background-image: url(../images/4.jpg);
+  animation-delay: 18s;
+}
+.landing-page-body .cb-slideshow li:nth-child(5) span {
+  background-image: url(../images/5.jpg);
+  animation-delay: 24s;
+}
+.landing-page-body .cb-slideshow li:nth-child(6) span {
+  background-image: url(../images/6.jpg);
+  animation-delay: 30s;
+}
+.landing-page-body .content-container {
+  z-index: 1;
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
 }
-.landing-page-body .flex-container {
+.landing-page-body .content-container .flex-container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: center;
   height: 75%;
 }
-.landing-page-body .flex-container .container {
+.landing-page-body .content-container .flex-container .container {
   margin: 0;
 }
-.buttons-container {
+.landing-page-body .buttons-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -201,17 +247,17 @@ button {
   justify-content: space-evenly;
 }
 @media (max-width: 800px) {
-  .buttons-container {
+  .landing-page-body .buttons-container {
     width: 90%;
   }
 }
 @media (max-width:500px) {
-  .buttons-container {
+  .landing-page-body .buttons-container {
     flex-direction: column;
     align-items: center;
   }
 }
-.buttons-container a {
+.landing-page-body .buttons-container a {
   border: none;
   width: 130px;
   margin: 6px;
@@ -225,28 +271,28 @@ button {
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
 }
-.buttons-container a:hover {
+.landing-page-body .buttons-container a:hover {
   animation-name: button-animation-in;
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
 }
-.landing-nav {
+.landing-page-body .landing-nav {
   background: rgba(220, 220, 220, 0.6);
   padding: 5px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.landing-nav .title {
+.landing-page-body .landing-nav .title {
   color: black;
   font-size: 2rem;
   padding-left: 10px;
 }
-.landing-nav .links {
+.landing-page-body .landing-nav .links {
   display: flex;
   justify-content: space-evenly;
 }
-.landing-nav .links a {
+.landing-page-body .landing-nav .links a {
   text-decoration: none;
   color: black;
   font-size: 2rem;
@@ -258,33 +304,33 @@ button {
   animation-duration: 0.5s;
 }
 @media (max-width: 800px) {
-  .landing-nav .links a {
+  .landing-page-body .landing-nav .links a {
     font-size: 1.5rem;
     padding: 6px 15px;
   }
 }
-.landing-nav .links a:hover {
+.landing-page-body .landing-nav .links a:hover {
   animation-name: nav-animation-in;
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
 }
 @media (max-width:500px) {
-  .landing-nav {
+  .landing-page-body .landing-nav {
     justify-content: center;
   }
 }
 @media (max-width: 800px) {
-  .landing-nav .title {
+  .landing-page-body .landing-nav .title {
     font-size: 1.5rem;
   }
 }
 @media (max-width:500px) {
-  .landing-nav .title {
+  .landing-page-body .landing-nav .title {
     display: none;
   }
 }
 @media (max-width:500px) {
-  .landing-nav .links {
+  .landing-page-body .landing-nav .links {
     padding-right: 0px;
   }
 }
@@ -529,5 +575,24 @@ hr {
   }
   to {
     background: none;
+  }
+}
+@keyframes image-animation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  8% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
