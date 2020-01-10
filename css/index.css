@@ -164,7 +164,7 @@ button {
   }
 }
 .bg .container-about h1 {
-  background-color: #88304E;
+  background-color: #88304e;
   clear: both;
   border-radius: 100px;
   display: inline-block;
@@ -221,22 +221,57 @@ button {
   font-size: 3rem;
   text-decoration: none;
   color: black;
+  animation-name: button-animation-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+.buttons-container a:hover {
+  animation-name: button-animation-in;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
 }
 .landing-nav {
   background: rgba(220, 220, 220, 0.6);
-  padding: 10px 0;
+  padding: 5px 0;
   display: flex;
   justify-content: space-between;
-}
-@media (max-width:500px) {
-  .landing-nav {
-    justify-content: center;
-  }
+  align-items: center;
 }
 .landing-nav .title {
   color: black;
   font-size: 2rem;
   padding-left: 10px;
+}
+.landing-nav .links {
+  display: flex;
+  justify-content: space-evenly;
+}
+.landing-nav .links a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  padding: 8px 30px;
+  margin: 0 5px;
+  border-radius: 100px;
+  animation-name: nav-animation-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+@media (max-width: 800px) {
+  .landing-nav .links a {
+    font-size: 1.5rem;
+    padding: 6px 15px;
+  }
+}
+.landing-nav .links a:hover {
+  animation-name: nav-animation-in;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+@media (max-width:500px) {
+  .landing-nav {
+    justify-content: center;
+  }
 }
 @media (max-width: 800px) {
   .landing-nav .title {
@@ -248,20 +283,9 @@ button {
     display: none;
   }
 }
-.landing-nav .links {
-  display: flex;
-  justify-content: space-evenly;
-}
-.landing-nav .links a {
-  text-decoration: none;
-  color: black;
-  font-size: 2rem;
-  padding: 0 30px;
-}
-@media (max-width: 800px) {
-  .landing-nav .links a {
-    font-size: 1.5rem;
-    padding: 0 15px;
+@media (max-width:500px) {
+  .landing-nav .links {
+    padding-right: 0px;
   }
 }
 .about-container {
@@ -278,25 +302,16 @@ button {
   margin: 60px 0 30px 0;
 }
 .about-nav {
-  background: #88304E;
-  padding: 10px 0;
+  background: #88304e;
+  padding: 5px 0;
   display: flex;
   justify-content: space-between;
-}
-@media (max-width: 800px) {
-  .about-nav {
-    flex-direction: column;
-  }
+  align-items: center;
 }
 .about-nav .title {
   color: white;
   font-size: 2rem;
   padding-left: 10px;
-}
-@media (max-width: 800px) {
-  .about-nav .title {
-    padding-bottom: 20px;
-  }
 }
 .about-nav .links {
   display: flex;
@@ -306,16 +321,36 @@ button {
   text-decoration: none;
   color: white;
   font-size: 2rem;
-  padding: 0 30px;
+  padding: 8px 30px;
+  margin: 0 5px;
+  border-radius: 100px;
+  animation-name: about-nav-animation-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
 }
 @media (max-width: 800px) {
   .about-nav .links a {
     font-size: 1.5rem;
-    padding: 0 15px;
+    padding: 6px 15px;
+  }
+}
+.about-nav .links a:hover {
+  animation-name: about-nav-animation-in;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+@media (max-width: 800px) {
+  .about-nav {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  .about-nav .title {
+    padding-bottom: 20px;
   }
 }
 .person {
-  background: #88304E;
+  background: #88304e;
   padding: 25px 0;
   border-radius: 20px;
   display: flex;
@@ -377,7 +412,7 @@ button {
 }
 @media (max-width:500px) {
   .person .img-container-a img {
-    height: 80vw;
+    height: 50vw;
   }
 }
 .person .img-container-b {
@@ -403,11 +438,13 @@ button {
     height: 80vw;
   }
 }
-.odd {
-  flex-direction: column-reverse;
+@media (max-width:500px) {
+  .odd {
+    flex-direction: column-reverse;
+  }
 }
 hr {
-  border: 3px solid #88304E;
+  border: 3px solid #88304e;
   border-radius: 100px;
   margin: 30px 0;
 }
@@ -419,7 +456,7 @@ hr {
   display: none;
 }
 .pitch {
-  background: #88304E;
+  background: #88304e;
   padding: 25px;
   border-radius: 20px;
 }
@@ -436,5 +473,61 @@ hr {
 @media (max-width:500px) {
   .pitch p {
     font-size: 1.8rem;
+  }
+}
+@keyframes button-animation-in {
+  from {
+    background: rgba(220, 220, 220, 0.6);
+    color: black;
+  }
+  to {
+    background: #88304e;
+    color: white;
+  }
+}
+@keyframes button-animation-out {
+  from {
+    background: #88304e;
+    color: white;
+  }
+  to {
+    background: rgba(220, 220, 220, 0.6);
+    color: black;
+  }
+}
+@keyframes nav-animation-in {
+  from {
+    background: none;
+    color: black;
+  }
+  to {
+    background: #88304e;
+    color: white;
+  }
+}
+@keyframes nav-animation-out {
+  from {
+    background: #88304e;
+    color: white;
+  }
+  to {
+    background: none;
+    color: black;
+  }
+}
+@keyframes about-nav-animation-in {
+  from {
+    background: none;
+  }
+  to {
+    background: #311D3F;
+  }
+}
+@keyframes about-nav-animation-out {
+  from {
+    background: #311D3F;
+  }
+  to {
+    background: none;
   }
 }

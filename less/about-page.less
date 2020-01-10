@@ -11,40 +11,20 @@
 }
 
 
-.about-nav{ 
-    background: @about-content-bg-color;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
 
+.about-nav{ 
+     .nav-creator(@about-content-bg-color, @text-color-2, about-nav-animation-in, about-nav-animation-out);
     @media @tablet{
         flex-direction: column;
     }
     .title{
-        color: @text-color-2;
-        font-size: 2rem;
-        padding-left: 10px;
+
         @media @tablet{
             padding-bottom: 20px;
         }
     }
-    .links{
-        //padding-right: 100px;
-        display: flex;
-        justify-content: space-evenly;
-     a{
-        text-decoration: none;
-        color: @text-color-2;
-        font-size: 2rem;
-        padding: 0 30px;
-        @media @tablet{
-            font-size: 1.5rem;
-            padding: 0 15px;
-        }
-    }
-    }
-   
 }
+    
 
 
 .person{
@@ -96,7 +76,7 @@
                 height: 200px;
             }
             @media @mobile{
-                height: 80vw;
+                height: 50vw;
             }
         }
     }
@@ -120,7 +100,10 @@
 }
 
 .odd{
-    flex-direction: column-reverse;
+    @media @mobile{
+        flex-direction: column-reverse;
+    }
+
 }
 
 hr{

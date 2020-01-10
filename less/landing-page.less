@@ -29,6 +29,7 @@
  display: flex;
  flex-wrap: nowrap;
  justify-content: space-evenly;
+
     
     @media @tablet{
         width: 90%;
@@ -49,6 +50,16 @@
         font-size: 3rem; 
         text-decoration: none;
         color: @text-color-1;
+        
+        &:hover{
+            animation-name: button-animation-in;
+            animation-fill-mode: forwards;
+            animation-duration: 0.5s; 
+        }
+
+        animation-name: button-animation-out;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
     }
     
         
@@ -58,17 +69,11 @@
 
 
 .landing-nav{
-    background: @content-bg-color;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
+    .nav-creator(@content-bg-color, @text-color-1, nav-animation-in, nav-animation-out);
     @media @mobile{
         justify-content: center;
     }
     .title{
-        color: @text-color-1;
-        font-size: 2rem;
-        padding-left: 10px;
         @media @tablet{
             font-size: 1.5rem;
         }
@@ -77,18 +82,8 @@
         }
     }
     .links{
-        //padding-right: 100px;
-        display: flex;
-        justify-content: space-evenly;
-        a{
-            text-decoration: none;
-            color: @text-color-1;
-            font-size: 2rem;
-            padding: 0 30px;
-            @media @tablet{
-                font-size: 1.5rem;
-                padding: 0 15px;
-            }
+        @media @mobile{
+            padding-right: 0px;
         }
     }
    
