@@ -1,0 +1,40 @@
+.nav-creator(@bg-color, @text-color, @animation-in, @animation-out){
+    
+    
+        background: @bg-color;
+        padding: 5px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title{
+            color: @text-color;
+            font-size: 2rem;
+            padding-left: 10px;
+        }
+        .links{
+            display: flex;
+            justify-content: space-evenly;
+            a{
+                text-decoration: none;
+                color: @text-color;
+                font-size: 2rem;
+                padding: 8px 30px;
+                margin: 0 5px;
+                border-radius: 100px;
+                @media @tablet{
+                    font-size: 1.5rem;
+                    padding: 6px 15px;
+                }
+                &:hover{
+                    animation-name: @animation-in;
+                    animation-fill-mode: forwards;
+                    animation-duration: 0.5s;
+                }
+                animation-name: @animation-out;
+                animation-fill-mode: forwards;
+                animation-duration: 0.5s; 
+            }
+        }
+       
+    }
