@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'passportregular';
-    src: url('file:///C:/Users/eriks/Lambda/web-fundamentals/web-unit-1-build/UI-Restaurant-Passport/passport-webfont.woff2') format('woff2'),
-         url('file:///C:/Users/eriks/Lambda/web-fundamentals/web-unit-1-build/UI-Restaurant-Passport/passport-webfont.woff') format('woff');
+    src: url('../UI-Restaurant-Passport/passport-webfont.woff2') format('woff2'),
+         url('../UI-Restaurant-Passport/passport-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
